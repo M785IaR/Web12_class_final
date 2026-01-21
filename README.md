@@ -66,8 +66,7 @@ docker compose exec -T mysql mysql example_db < init.sql
 ### 以上で構築完了になります
   
 ## 動作確認
-3の構築したサービスのURL  
-でアクセス後、新規登録してログインでもできますが、init.sqlにデータ挿入しているので、  
+3の構築したサービスのURLでアクセス後、新規登録してログインでもできますが、init.sqlにデータ挿入しているので、  
 ```
 メールアドレス： chitose@example.com  
 パスワード：　password
