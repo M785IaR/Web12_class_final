@@ -15,32 +15,32 @@ ls -l
 //dockertestディレクトリがあれば、ディレクトリ内に入る  
 cd dockertest  
   
-//Dockerが入っていない場合はインストールし、自動的に起動させるようにする  
+//Dockerが入っていない場合はインストールし、自動的に起動させるようにする  
 sudo yum install -y docker  
-sudo systemctl start docker   
-sudo systemctl enable docker  
+sudo systemctl start docker  
+sudo systemctl enable docker  
   
-//権限を毎回sudoして実行しないように、dockerコマンドを実行できるようにdockerグループに追加する  
-sudo usermod -a -G docker ec2-user  
+//権限を毎回sudoして実行しないように、dockerコマンドを実行できるようにdockerグループに追加する  
+sudo usermod -a -G docker ec2-user  
   
-//ログアウトしてもう一度再ログインする(権限のエラーを防ぐ)   
+//ログアウトしてもう一度再ログインする(権限のエラーを防ぐ)  
 newgrp docker  
   
-//Docker Composeをインストールする  
+//Docker Composeをインストールする  
 sudo mkdir -p /usr/local/lib/docker/cli-plugins/  
-sudo curl -SL https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose   
-sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose  
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose  
+sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose  
   
-//インストールできたかバージョンを確認する  
-docker compose version  
+//インストールできたかバージョンを確認する  
+docker compose version  
   
 //GitHubからソースコード(Dockerfile, compose.yml, その他phpコード等)をダウンロードする  
 git clone https://github.com/M785IaR/Web12_class_final.git  
   
-//ダウンロードしたリポジトリのディレクトリに移動する  
+//ダウンロードしたリポジトリのディレクトリに移動する  
 cd Web12_class_final  
   
-//ダウンロードしたcompose.ymlがあるか確認する  
+//ダウンロードしたcompose.ymlがあるか確認する  
 ls -l  
    
 //ビルド&起動する  
@@ -55,5 +55,5 @@ docker compose exec -T mysql mysql example_db < init.sql
 ## 動作確認
 3の構築したサービスのURLでアクセス後、新規登録してログインでもできますが、init.sqlにデータ挿入しているので、  
 メールアドレス： chitose@example.com  
-パスワード：　password  
+パスワード：　password    
 と入力してもログインできます。
