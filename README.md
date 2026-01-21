@@ -9,15 +9,15 @@ sudo yum install git -y
 //ec2インスタンスの中にdockertestディレクトリを作る  
 mkdir dockertest   
 
-//ec2インスタンスの中にdockertestディレクトリがあるか確認   
+//ec2インスタンスの中にdockertestディレクトリがあるか確認  
 ls -l  
   
 //dockertestディレクトリがあれば、ディレクトリ内に入る  
 cd dockertest  
   
 //Dockerが入っていない場合はインストールし、自動的に起動させるようにする  
-sudo yum install -y docker  
-sudo systemctl start docker  
+sudo yum install -y docker  
+sudo systemctl start docker   
 sudo systemctl enable docker  
   
 //権限を毎回sudoして実行しないように、dockerコマンドを実行できるようにdockerグループに追加する  
@@ -27,8 +27,8 @@ sudo usermod -a -G docker ec2-user 
 newgrp docker  
   
 //Docker Composeをインストールする  
-sudo mkdir -p /usr/local/lib/docker/cli-plugins/  
-sudo curl -SL https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-x86_64 -o  /usr/local/lib/docker/cli-plugins/docker-compose  
+sudo mkdir -p /usr/local/lib/docker/cli-plugins/  
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose   
 sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose  
   
 //インストールできたかバージョンを確認する  
