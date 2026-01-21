@@ -72,4 +72,3 @@ docker compose exec -T mysql mysql example_db < init.sql
 メールアドレス： chitose@example.com  
 パスワード：　password
 ```  
-と入力してもログインできます。
