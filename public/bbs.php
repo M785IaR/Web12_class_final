@@ -26,6 +26,18 @@ function bodyFilter (string $body): string
 }
 
 ?>
+<a href="/bbs.php">掲示板</a>
+/
+<a href="/profile.php?user_id=<?= $_SESSION['login_user_id'] ?>">プロフ</a>
+/
+<a href="/users.php">会員一覧</a>
+/
+<a href="/follow_list.php">フォロー中</a>
+/
+<a href="/follower_list.php">フォロワー</a>
+/
+<a href="/logout.php" class="logout">ログアウト</a>
+/
 <?php if(empty($_SESSION['login_user_id'])): ?>
   <a href="/login.php">ログイン</a>して自分のタイムラインを閲覧しましょう！
 <?php else: ?>

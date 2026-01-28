@@ -59,6 +59,18 @@ if (!empty($_SESSION['login_user_id'])) { // ログインしている場合
   $follower_relationship = $select_sth->fetch();
 }
 ?>
+<a href="/bbs.php">掲示板</a>
+/
+<a href="/profile.php?user_id=<?= $_SESSION['login_user_id'] ?>">プロフ</a>
+/
+<a href="/users.php">会員一覧</a>
+/
+<a href="/follow_list.php">フォロー中</a>
+/
+<a href="/follower_list.php">フォロワー</a>
+/
+<a href="/logout.php" class="logout">ログアウト</a>
+/
 <a href="/timeline.php">タイムラインに戻る</a>
 
 <div style="

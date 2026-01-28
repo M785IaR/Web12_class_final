@@ -25,7 +25,19 @@ $select_sth->execute([
 ?>
 
 <h1>フォローされている一覧</h1>
-
+<a href="/timeline.php">タイムライン</a>
+/
+<a href="/bbs.php">掲示板</a>
+/
+<a href="/profile.php?user_id=<?= $_SESSION['login_user_id'] ?>">プロフ</a>
+/
+<a href="/users.php">会員一覧</a>
+/
+<a href="/follow_list.php">フォロー中</a>
+/
+<a href="/follower_list.php">フォロワー</a>
+/
+<a href="/logout.php" class="logout">ログアウト</a>
 <ul>
   <?php foreach($select_sth as $relationship): ?>
   <li>

@@ -51,6 +51,16 @@ if (!empty($_SESSION['login_user_id'])) {
     <a href="/setting/index.php">設定画面</a>
     /
     <a href="/timeline.php">タイムライン</a>
+    /
+    <a href="/bbs.php">掲示板</a>
+    /
+		<a href="/profile.php?user_id=<?= $_SESSION['login_user_id'] ?>">プロフ</a>
+		/
+		<a href="/follow_list.php">フォロー中</a>
+		/
+    <a href="/follower_list.php">フォロワー</a>
+    /
+		<a href="/logout.php" class="logout">ログアウト</a>
   </div>
 
   <div style="margin-bottom: 1em;">
