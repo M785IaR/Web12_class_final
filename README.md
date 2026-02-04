@@ -76,7 +76,7 @@ docker compose up -d --build
 docker compose exec -T mysql mysql -u root example_db < init.sql
 ```
 
-### 以上で構築完了になります
+以上で構築完了になります
   
 ## 動作確認
 構築したサービスのURLでアクセス後、新規登録も可能ですがinit.sqlにデータ挿入しているので、  
