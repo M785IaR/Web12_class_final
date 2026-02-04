@@ -71,8 +71,7 @@ ls -l
 docker compose up -d --build
 ```
 
-### ダウンロードしたinit.sqlをデータベースに入れる
-### init.sqlには仮のデータが入ってます
+### ダウンロードしたinit.sqlをデータベースに入れる(init.sqlには仮のデータが入ってます)
 ```sh
 docker compose exec -T mysql mysql -u root example_db < init.sql
 ```
